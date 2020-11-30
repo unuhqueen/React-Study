@@ -4,7 +4,8 @@ var kim = {
     second: 20,
     third: 30,
     sum: function(){
-        return this.first + this.second + this.third; //this: 자신이 속해있는 객체 (나, me와 같은 뜻)
+        //this: 자신이 속해있는 객체 (나, me와 같은 뜻)
+        return this.first + this.second + this.third; 
     }
 }
 
@@ -14,7 +15,7 @@ var lee = {
     second: 10,
     third: 10,
     sum: function(){
-        return this.first + this.second + this.third; //this: 자신이 속해있는 객체 (나, me와 같은 뜻)
+        return this.first + this.second + this.third; 
     }
 }
 // console.log("kim.sum(kim.first, kim.second)", kim.sum(kim.first, kim.second));
@@ -32,13 +33,17 @@ function Person(name, first, second, third){
     this.second = second;
     this.third = third;
     this.sum = function(){
-        return this.first + this.second + this.third; //this: 자신이 속해있는 객체 (나, me와 같은 뜻)
+        //this: 자신이 속해있는 객체 (나, me와 같은 뜻)
+        return this.first + this.second + this.third; 
     }
 }
-console.log('Person()', Person()); //그냥 함수
+
+//그냥 함수
+console.log('Person()', Person()); 
 
 //constructor(생성자) 함수
-console.log('new Person()', new Person()); //Person이라는 하나의 객체 출력
+//Person이라는 하나의 객체 출력
+console.log('new Person()', new Person()); 
 
 var kim = new Person('kim', 10, 20, 30);
 var lee = new Person('lee', 10, 10, 10);

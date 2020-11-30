@@ -1,5 +1,7 @@
 class Person{
-    constructor(name, first, second) { //객체가 생성될 때 자동으로 호출되는 함수
+    
+    //객체가 생성될 때 자동으로 호출되는 함수
+    constructor(name, first, second) { 
         this.name = name;
         this.first = first;
         this.second = second;
@@ -10,9 +12,14 @@ class Person{
 
 }
 
-class PersonPlus extends Person { //extends: Person class를 확장한다
-    constructor(name, first, second, third) { //객체가 생성될 때 자동으로 호출되는 함수
-        super(name, first, second); //super == 부모 클래스
+//extends: Person class를 확장한다
+class PersonPlus extends Person { 
+    
+    //객체가 생성될 때 자동으로 호출되는 함수
+    constructor(name, first, second, third) { 
+        
+        //super == 부모 클래스
+        super(name, first, second); 
         /*  this.name = name;
             this.first = first;
             this.second = second; */
@@ -31,6 +38,8 @@ var kim = new PersonPlus('kim', 10, 20, 30);
 kim.sum = function(){
     return 'modified: ' +(this.first+this.second);
 }
-console.log('kim', kim); //변수 kim을 출력
+
+//변수 kim을 출력
+console.log('kim', kim); 
 console.log('kim.sum()', kim.sum());
 console.log('kim.avg()', kim.avg());
