@@ -10,7 +10,13 @@ class TOC extends Component {
             //key는 각각의 child를 구별하기 위함
             lists.push(
                 <li key={data[i].id}>
-                    <a href={"/content/" + data[i].id}>{data[i].title}</a>
+                <a 
+                    href={"/content/" + data[i].id}
+                    onClick = {function(e){
+                        e.preventDefault();
+                        this.props.onChangePage();
+                    }.bind(this)}
+                    >{data[i].title}</a>
                 </li>
             )
             i = i + 1;
